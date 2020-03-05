@@ -16,7 +16,7 @@
 #'   b <- bucketlist()
 #'   get_bucket(b[1,1])
 #'   get_bucket_df(b[1,1])
-#' 
+#'
 #'   # bucket names with dots
 #'   ## this (default) should work:
 #'   get_bucket("this.bucket.has.dots", url_style = "path")
@@ -31,7 +31,7 @@
 get_bucket <- function(bucket,
                        prefix = NULL,
                        delimiter = NULL,
-                       max = NULL,
+                       max = Inf,
                        marker = NULL,
                        parse_response = TRUE,
                        ...) {
@@ -97,7 +97,7 @@ get_bucket_df <-
 function(bucket,
          prefix = NULL,
          delimiter = NULL,
-         max = NULL,
+         max = Inf,
          marker = NULL,
          ...) {
 
